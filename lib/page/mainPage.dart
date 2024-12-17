@@ -93,7 +93,7 @@ class MyBottomNavigationBar extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(6)), // Rounded corners
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5), // Shadow color with transparency
+            color: Colors.grey.withOpacity(0.7), // Shadow color with transparency
             blurRadius: 8, // Blur radius for shadow
             offset: Offset(0, 4), // Position of the shadow
           ),

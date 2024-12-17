@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homemarket/config/AppRoutes.dart';
 import 'dart:ui';
 
 import '../componants/AppCardItem.dart'; // For BackdropFilter
@@ -37,7 +38,7 @@ class profilePage extends StatelessWidget {
                   Positioned(
                       right: 0,
                       child: ElevatedButton(onPressed: (){
-                        print("click on setting");
+                        Navigator.of(context).pushNamed(AppRoutes.settings);
                       },
                         child: Icon(Icons.settings_sharp),)
                   ),
