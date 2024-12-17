@@ -73,7 +73,7 @@ class HomePageState extends State<homePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         // Optional image: Uncomment and add your image here if needed
-                         Image.asset('assets/png/home.jpg', height: 250),
+                         Image.asset('assets/png/home.png', height: 250),
                         SizedBox(height: 70),
                         Text(
                           _pageContents[index]['title']!,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:homemarket/config/AppIcons.dart';
+import 'package:homemarket/page/profilePage.dart';
 
 enum Menus {
   home,
@@ -54,14 +55,7 @@ class _MainPageState extends State<mainPage> {
         ),
       ),
     ),
-    Menus.user: const Center(
-      child: Text(
-        "This is profile page",
-        style: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    ),
+    Menus.user: const profilePage(),
   };
 
   @override
