@@ -2,6 +2,7 @@ import 'package:homemarket/page/AppSetting.dart';
 import 'package:homemarket/page/mainPage.dart';
 import 'package:homemarket/page/profilePage.dart';
 
+import '../page/AddressListBook.dart';
 import '../page/homepage.dart';
 import '../page/signUp.dart';
 
@@ -13,6 +14,8 @@ class AppRoutes{
     mainpage: (context) => mainPage(),
     profilepage: (context) => profilePage(),
     settings: (context) => AppSetting(),
+    addressBook : (context) => AddressListBook(),
+
   };
 
   static const homepage = '/home';
@@ -20,4 +23,5 @@ class AppRoutes{
   static const mainpage = '/mainPage';
   static const profilepage = '/profile';
   static const settings = '/setting';
+  static const addressBook = '/location';
 }

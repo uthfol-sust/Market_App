@@ -114,7 +114,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             IconButton(
               onPressed: () => onTap(Menus.search),
               icon: SvgPicture.asset(
-                Appicons.massageIcon,
+                Appicons.searchIcon,
                 color: currentIndex == Menus.search ? Colors.amber[800] : Colors.grey,
               ),
             ),
@@ -122,7 +122,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             IconButton(
               onPressed: () => onTap(Menus.cart),
               icon: SvgPicture.asset(
-                Appicons.addIcon,
+                Appicons.cartIcon,
                 color: currentIndex == Menus.cart ? Colors.amber[800] : Colors.grey,
               ),
             ),

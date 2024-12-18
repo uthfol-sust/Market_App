@@ -14,19 +14,22 @@ class HomePageState extends State<homePage> {
   late Timer timer;
   int currentPage = 0;
 
-  // List of text content
+  // Updated list of page contents with image paths
   final List<Map<String, String>> _pageContents = [
     {
       'title': 'View product 360 degrees',
       'description': 'You can see the product with all angles, true and convenient',
+      'imagePath': 'assets/png/home.png', // Add your image path here
     },
     {
       'title': 'Find products easily',
       'description': 'You just need to take a photo or upload and we will find similar products for you.',
+      'imagePath': 'assets/png/find_product.png', // Add your image path here
     },
     {
       'title': 'Payment is easy',
-      'description': 'You just need to take a photo or upload and we will find similar products for you.',
+      'description': 'You can pay with various secure and easy payment methods.',
+      'imagePath': 'assets/png/sales.png', // Add your image path here
     },
   ];
 
@@ -51,7 +54,7 @@ class HomePageState extends State<homePage> {
 
   @override
   void dispose() {
-    timer.cancel();  // Cancel the timer when the widget is disposed
+    timer.cancel(); // Cancel the timer when the widget is disposed
     super.dispose();
   }
 
@@ -72,8 +75,11 @@ class HomePageState extends State<homePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Optional image: Uncomment and add your image here if needed
-                         Image.asset('assets/png/home.png', height: 250),
+                        // Display the image dynamically
+                        Image.asset(
+                          _pageContents[index]['imagePath']!,
+                          height: 250,
+                        ),
                         SizedBox(height: 70),
                         Text(
                           _pageContents[index]['title']!,
@@ -110,10 +116,10 @@ class HomePageState extends State<homePage> {
                 );
               }),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-               Navigator.of(context).pushNamed(AppRoutes.signup);
+                Navigator.of(context).pushNamed(AppRoutes.signup);
               },
               child: Text(
                 'Get Started',
@@ -127,7 +133,7 @@ class HomePageState extends State<homePage> {
                 ),
               ),
             ),
-            SizedBox(height: 50,)
+            SizedBox(height: 50),
           ],
         ),
       ),

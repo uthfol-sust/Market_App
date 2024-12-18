@@ -175,7 +175,7 @@ class profilePage extends StatelessWidget {
                             icon: Icons.location_on,
                             title:  'Address book',
                             onTap:(){
-                              print("click on address book");
+                            Navigator.of(context).pushNamed(AppRoutes.addressBook);
                             } ,
                         ),
                         const Divider(),
