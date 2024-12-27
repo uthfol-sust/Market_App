@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Shoes",
+    "category": "Shoes",
+    "gender": "Men",
+    "image": "assets/png/Gra_t_shirt.png"
+  },
+  {
+    "id": 2,
+    "name": "Black Shoe Transparent",
+    "category": "Shoes",
+    "gender": "Women",
+    "image": "assets/png/Gra_t_shirt.png"
+  },
+  {
+    "id": 3,
+    "name": "Women Shoes",
+    "category": "Shoes",
+    "gender": "Women",
+    "image": "assets/png/Gra_t_shirt.png"
+  },
+  {
+    "id": 4,
+    "name": "Handbag LV",
+    "category": "Accessories",
+    "gender": "Women",
+    "image": "assets/png/Gra_t_shirt.png"
+  },
+  {
+    "id": 5,
+    "name": "T-shirt",
+    "category": "Clothing",
+    "gender": "Men",
+    "image": "assets/png/Gra_t_shirt.png"
+  }
+]

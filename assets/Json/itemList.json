@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Summer Dress",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$99",
+    "size": "M"
+  },
+  {
+    "id": "2",
+    "title": "Cool T-Shirt",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$49",
+    "size": "M"
+  },
+  {
+    "id": "3",
+    "title": "T-Shirt",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$49",
+    "size": "M"
+  },
+  {
+    "id": "4",
+    "title": "Shirt",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$49",
+    "size": "M"
+  },
+  {
+    "id": "5",
+    "title": "Cool T-Shirt",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$49",
+    "size": "M"
+  },
+  {
+    "id": "6",
+    "title": "CoolShirt",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$49",
+    "size": "M"
+  },
+  {
+    "id": "7",
+    "title": "Saree",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$789",
+    "size": "M"
+  },
+  {
+    "id": "8",
+    "title": "Cool",
+    "imagePath": "assets/png/Gra_t_shirt.png",
+    "price": "$79",
+    "size": "M"
+  }
+]

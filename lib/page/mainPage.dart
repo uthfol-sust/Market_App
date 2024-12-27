@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:homemarket/config/AppIcons.dart';
+import 'package:homemarket/config/Appicons.dart';
+import 'package:homemarket/page/AppAddCartPage.dart';
+import 'package:homemarket/page/AppSearchDisplayItempage.dart';
+import 'package:homemarket/page/AppSearchPage.dart';
+import 'package:homemarket/page/FavoritePage.dart';
+import 'package:homemarket/page/Home.dart';
 import 'package:homemarket/page/profilePage.dart';
 
 enum Menus {
@@ -23,50 +28,22 @@ class _MainPageState extends State<mainPage> {
 
   // Map each menu to its corresponding page
   final Map<Menus, Widget> pages = {
-    Menus.home: const Center(
-      child: Text(
-        "This is main home page",
-        style: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    ),
-    Menus.search: const Center(
-      child: Text(
-        "This is Search page",
-        style: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    ),
-    Menus.cart: const Center(
-      child: Text(
-        "This is add to cart page",
-        style: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    ),
-    Menus.favor: const Center(
-      child: Text(
-        "This is favorite page",
-        style: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    ),
+    Menus.home: Home(),
+    Menus.search: AppSearchDisplayItemPage(),
+    Menus.cart: AppAddCartPage(),
+    Menus.favor: const FavoritePage() ,
     Menus.user: const profilePage(),
   };
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[currentIndex]!, // Display the correct page based on currentIndex
+      body: pages[currentIndex]!,
       bottomNavigationBar: MyBottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (value) {
           setState(() {
-            currentIndex = value; // Update the current menu
+            currentIndex = value;
           });
         },
       ),
@@ -90,12 +67,12 @@ class MyBottomNavigationBar extends StatelessWidget {
       height: 60,
       decoration: BoxDecoration(
         color: Colors.white, // Box color
-        borderRadius: BorderRadius.all(Radius.circular(6)), // Rounded corners
+        borderRadius: BorderRadius.all(Radius.circular(6)),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.7), // Shadow color with transparency
-            blurRadius: 8, // Blur radius for shadow
-            offset: Offset(0, 4), // Position of the shadow
+            color: Colors.grey.withOpacity(0.7),
+            blurRadius: 8,
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -123,7 +100,9 @@ class MyBottomNavigationBar extends StatelessWidget {
               onPressed: () => onTap(Menus.cart),
               icon: SvgPicture.asset(
                 Appicons.cartIcon,
-                color: currentIndex == Menus.cart ? Colors.amber[800] : Colors.grey,
+                color: currentIndex == Menus.cart ?
+                                      Colors.amber[800]
+                                      : Colors.grey,
               ),
             ),
             Spacer(),

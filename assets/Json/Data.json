@@ -1,0 +1,20 @@
+{
+  "Men": [
+    {"name": "NEW IN", "image": "assets/mens/bag.png"},
+    {"name": "CLOTHING", "image": "assets/mens/clothing.png"},
+    {"name": "SHOES", "image": "assets/mens/shoes.png"},
+    {"name": "ACCESSORIES", "image": "assets/mens/watch.png"},
+    {"name": "FASHION", "image": "assets/mens/sunglasses.png"},
+    {"name": "SPORTSWEAR", "image": "assets/mens/sports.png"},
+    {"name": "BOOKS AND MAGAZINES", "image": "assets/mens/books.png"}
+  ],
+  "Women": [
+    {"name": "NEW IN", "image": "assets/mens/womenbag.png"},
+    {"name": "CLOTHING", "image": "assets/mens/clothingwo.png"},
+    {"name": "SHOES", "image": "assets/mens/shoeswo.png"},
+    {"name": "ACCESSORIES", "image": "assets/mens/access.png"},
+    {"name": "FASHION", "image": "assets/mens/fashion.png"},
+    {"name": "SPORTSWEAR", "image": "assets/mens/sports.png"},
+    {"name": "BOOKS AND MAGAZINES", "image": "assets/mens/books.png"}
+  ]
+}
