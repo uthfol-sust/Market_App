@@ -203,6 +203,38 @@ class profilePage extends StatelessWidget {
                             },
                         ),
                         const Divider(),
+                        AppCardItem(
+                          icon: Icons.logout,
+                          title: 'Log out',
+                          onTap: () {
+                            // Show a confirmation dialog
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  content: Text('Are you sure you want to log out?'),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Cancel',style: TextStyle(color: Colors.blueGrey),),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                    TextButton(
+                                      child: Text('OK',style: TextStyle(color: Colors.blueGrey)),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                        Navigator.of(context).pushReplacementNamed(AppRoutes.homepage);
+                                      },
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          },
+                        ),
+                        const Divider(),
+                        SizedBox(height: 15,),
                       ],
                     ),
                   ),

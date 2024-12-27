@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppCardItem extends StatelessWidget {
-  final IconData icon;
+  final IconData? icon;
   final String title;
   final VoidCallback onTap;
   final String? subtitle;
 
-  const AppCardItem({super.key, required this.icon, required this.title, required this.onTap, this.subtitle});
+  const AppCardItem({super.key, this.icon, required this.title, required this.onTap, this.subtitle});
 
   @override
   Widget build(BuildContext context) {

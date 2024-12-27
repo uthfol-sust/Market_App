@@ -1,58 +1,130 @@
 [
   {
     "id": "1",
-    "title": "Summer Dress",
-    "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$99",
+    "title": "Bag",
+    "category": "NEW IN",
+    "imagePath": "assets/mens/bag.png",
+    "price": "$54",
     "size": "M"
   },
   {
     "id": "2",
-    "title": "Cool T-Shirt",
-    "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$49",
+    "title": "Women Bag",
+    "category": "NEW IN",
+    "imagePath": "assets/mens/womenbag.png",
+    "price": "$99",
     "size": "M"
   },
   {
     "id": "3",
-    "title": "T-Shirt",
-    "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$49",
+    "title": "T-shirt",
+    "category": "CLOTHING",
+    "imagePath": "assets/mens/clothing.png",
+    "price": "$47",
     "size": "M"
   },
   {
     "id": "4",
-    "title": "Shirt",
-    "imagePath": "assets/png/Gra_t_shirt.png",
+    "title": "Women T-shirt",
+    "category": "CLOTHING",
+    "imagePath": "assets/mens/clothingwo.png",
     "price": "$49",
     "size": "M"
   },
   {
     "id": "5",
-    "title": "Cool T-Shirt",
-    "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$49",
+    "title": "Shoes",
+    "category": "SHOES",
+    "imagePath": "assets/mens/shoes.png",
+    "price": "$99",
     "size": "M"
   },
   {
     "id": "6",
-    "title": "CoolShirt",
-    "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$49",
+    "title": "Women Shoes",
+    "category": "SHOES",
+    "imagePath": "assets/mens/shoeswo.png",
+    "price": "$89",
     "size": "M"
   },
   {
     "id": "7",
-    "title": "Saree",
-    "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$789",
+    "title": "Watch",
+    "category": "ACCESSORIES",
+    "imagePath": "assets/mens/watch.png",
+    "price": "$79",
     "size": "M"
   },
   {
     "id": "8",
-    "title": "Cool",
+    "title": "Women Accessories",
+    "category": "ACCESSORIES",
+    "imagePath": "assets/mens/access.png",
+    "price": "$65",
+    "size": "M"
+  },
+  {
+    "id": "9",
+    "title": "Sunglasses",
+    "category": "FASHION",
+    "imagePath": "assets/mens/sunglasses.png",
+    "price": "$45",
+    "size": "M"
+  },
+  {
+    "id": "10",
+    "title": "Women Fashion",
+    "category": "FASHION",
+    "imagePath": "assets/mens/fashion.png",
+    "price": "$70",
+    "size": "M"
+  },
+  {
+    "id": "11",
+    "title": "Sports",
+    "category": "SPORTSWEAR",
+    "imagePath": "assets/mens/sportswear.png",
+    "price": "$120",
+    "size": "M"
+  },
+  {
+    "id": "12",
+    "title": "Women Sports",
+    "category": "SPORTSWEAR",
+    "imagePath": "assets/mens/sports.png",
+    "price": "$110",
+    "size": "M"
+  },
+  {
+    "id": "13",
+    "title": "Books",
+    "category": "BOOKS AND MAGAZINES",
+    "imagePath": "assets/mens/books.png",
+    "price": "$15",
+    "size": "M"
+  },
+  {
+    "id": "14",
+    "title": "Women Books",
+    "category": "BOOKS AND MAGAZINES",
+    "imagePath": "assets/mens/books.png",
+    "price": "$20",
+    "size": "M"
+  },
+  {
+    "id": "15",
+    "title": "T-Shirt",
+    "category": "CLOTHING",
     "imagePath": "assets/png/Gra_t_shirt.png",
-    "price": "$79",
+    "price": "$73",
+    "size": "M"
+  },
+  {
+    "id": "16",
+    "title": "Sandle",
+    "category": "SHOES",
+    "imagePath": "assets/png/sandle.png",
+    "price": "$99",
     "size": "M"
   }
 ]

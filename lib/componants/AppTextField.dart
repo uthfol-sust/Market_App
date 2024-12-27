@@ -14,6 +14,7 @@ class AppTextField extends StatelessWidget{
     return TextField(
       style: TextStyle(
         fontSize: 14,
+        color: Colors.black54
       ),
       decoration: InputDecoration(
         hintText: hint,

@@ -17,7 +17,6 @@ class AddressListBook extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  // Add your address list or other content here
                   Text(
                     "Your Addresses will appear here",
                     style: TextStyle(fontSize: 16),

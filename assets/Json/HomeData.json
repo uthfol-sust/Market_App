@@ -1,0 +1,41 @@
+{
+  "cardData": [
+    { "imagePath": "assets/png/Gra_t_shirt.png", "title": "Graphic shirt", "subtitle": "The fine print" },
+    { "imagePath": "assets/png/kids.png", "title": "Summer co-orders", "subtitle": "Just add kicks" },
+    { "imagePath": "assets/png/sandle.png", "title": "Sandals", "subtitle": "Stay cool" },
+    { "imagePath": "assets/png/facewash.png", "title": "Face coverings", "subtitle": "Washable" }
+  ],
+  "recentlyViewed": [
+    { "imagePath": "assets/mens/sports.png", "title": "Sports Wear" },
+    { "imagePath": "assets/mens/watch.png", "title": "Watch" }
+  ],
+  "savedItems": [
+    { "imagePath": "assets/mens/clothing.png", "title": "T-shirt", "price": "$225" },
+    { "imagePath": "assets/png/kids.png", "title": "Kids", "price": "$123" }
+  ],
+  "shoppingHabitsStyles": [
+    { "imagePath": "assets/png/facewash.png", "title": "Fortnite Tee", "price": "$36" },
+    { "imagePath": "assets/mens/watch.png", "title": "Casual Shorts", "price": "$98" }
+  ],
+  "brands": ["Nike",
+    "Adidas",
+    "Vans",
+    "The North Face",
+    "Collusion",
+    "Calvin Klein",
+    "Champion",
+    "Fred Perry",
+    "Fila",
+    "Carhartt Wip",
+    "Puma",
+    "Levi's",
+    "Dr Martens",
+    "Tommy Hilfiger",
+    "Lascolate"
+  ],
+  "bigCard": {
+    "imagePath": "assets/png/Newtrend.png",
+    "title": "NEW Trend",
+    "subtitle": "Check out the latest trends!"
+  }
+}

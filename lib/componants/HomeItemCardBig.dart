@@ -10,6 +10,7 @@ class HomeItemCardBig extends StatelessWidget {
   final VoidCallback onTap;
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
+  final IconData? icon;
 
   const HomeItemCardBig({
     super.key,
@@ -22,6 +23,7 @@ class HomeItemCardBig extends StatelessWidget {
     required this.onTap,
     this.titleStyle,
     this.subtitleStyle,
+    this.icon,
   });
 
   @override

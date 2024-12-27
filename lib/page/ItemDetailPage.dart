@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:homemarket/componants/appBar.dart';
 import 'package:homemarket/config/Appicons.dart';
 
+import '../config/ProductList.dart';
 import 'AppAddCartPage.dart';
 
 class ItemDetailPage extends StatefulWidget {
@@ -41,11 +42,15 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Image.asset(widget.item['imagePath'], width: 150, height: 150),
+              Image.asset(
+                  widget.item['imagePath'],
+                  width: 150,
+                  height: 150
+              ),
               SizedBox(height: 10),
               Text(
                 widget.item['title'],
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black54),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 10),
@@ -134,6 +139,12 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
               // Add to Cart Button
               ElevatedButton(
                 onPressed: () {
+                  cartList.add({
+                    'item': widget.item,
+                    'quantity': quantity,
+                    'selectedSize': selectedSize,
+                    'selectedColor': selectedColor,
+                  });
                   Navigator.push(
                     context,
                     MaterialPageRoute(

@@ -1,6 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:homemarket/componants/DisplayCardSmall.dart';
+
+import 'ItemDetailPage.dart';
 
 class AppSearchPage extends StatefulWidget {
   @override
@@ -20,7 +23,7 @@ class _AppSearchPageState extends State<AppSearchPage> {
   }
 
   Future<void> loadJsonData() async {
-    final String response = await rootBundle.loadString('assets/Json/SearchData.json');
+    final String response = await rootBundle.loadString('assets/Json/itemList.json');
     final List<dynamic> data = json.decode(response);
     setState(() {
       allData = data;
@@ -35,8 +38,9 @@ class _AppSearchPageState extends State<AppSearchPage> {
       } else {
         filteredData = allData
             .where((item) =>
-            item['name'].toLowerCase().contains(input.toLowerCase()))
+            item['title'].toLowerCase().contains(input.toLowerCase()))
             .toList();
+        print(filteredData);
       }
     });
   }
@@ -106,43 +110,52 @@ class _AppSearchPageState extends State<AppSearchPage> {
           ),
 
           // Recent Searches Section
-          if (query.isEmpty && recentSearches.isNotEmpty)
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Recent Searches",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
-                  ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: recentSearches.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(recentSearches[index]),
-                        trailing: IconButton(
-                          icon: Icon(Icons.clear),
-                          onPressed: () {
-                            setState(() {
-                              recentSearches.removeAt(index);
-                            });
-                          },
+            if (query.isEmpty && recentSearches.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Recent Searches",
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                         ),
-                        onTap: () {
-                          handleSearch(recentSearches[index]);
-                        },
-                      );
-                    },
-                  ),
-                  TextButton(
-                    onPressed: clearRecentSearches,
-                    child: Text("Clear All",style: TextStyle(color:Colors.black)),
-                  ),
-                ],
+                        TextButton(
+                          onPressed: clearRecentSearches,
+                          child: Text(
+                            "Clear All",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: recentSearches.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(recentSearches[index]),
+                          trailing: IconButton(
+                            icon: Icon(Icons.clear),
+                            onPressed: () {
+                              setState(() {
+                                recentSearches.removeAt(index);
+                              });
+                            },
+                          ),
+                          onTap: () {
+                            handleSearch(recentSearches[index]);
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
-            ),
+
 
           // Filtered Data Section
           if (query.isNotEmpty)
@@ -150,10 +163,27 @@ class _AppSearchPageState extends State<AppSearchPage> {
               child: ListView.builder(
                 itemCount: filteredData.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(filteredData[index]['name']),
-                    subtitle: Text(filteredData[index]['category']),
-                  );
+                   return Center(
+                       child: Padding(
+                         padding: EdgeInsets.all(15),
+                         child: Container(
+                           width: 170,
+                           child: DisplayCardSmall(
+                               height: 170,
+                               imagePath:filteredData[index]['imagePath'] ,
+                               title:filteredData[index]['title'],
+                               onTap:(){
+                                 Navigator.push(
+                                     context,
+                                     MaterialPageRoute(
+                                     builder: (context) => ItemDetailPage(item: filteredData[index]),
+                                 ),
+                                 );
+                               } ,
+                           ),
+                         ),
+                       )
+                   );
                 },
               ),
             ),
